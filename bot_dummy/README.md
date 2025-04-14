@@ -1,25 +1,13 @@
-### Пример работы бота
+## простой Spam bot для демонстрации
 
-![VK Teams logotype](./resources/screenshot.png "logotype")
-
-### запуск бота в cron
-
-сделать файл бота исполняемым
+### запуск
 
 ```shell
-chmod +x VKTeamsBot_getREviewsRuStore.py
+python3 -m pip install loguru~=0.7.3 mailru-im-bot~=0.0.21 
+
+python3 VKTeamsBot_simpleSpamBotExample.py
 ```
 
-открыть редактирование правил cron
+### пример работы
 
-```shell
-crontab -e
-```
-
-добавить строку:
-
-```
-*/5 9-18 * * 1-5 /Users/user/Projects/vkteams_bots_examples/VKTeamsBot_getREviewsRuStore.py --token "токен_бота" > /Users/user/Projects/vkteams_bots_examples/rustore_scraper.console.log 2>&1
-```
-
-то есть каждые пять минут в рабочее время в рабочие дни вызывать вот этот скрипт
+![VK Teams spam bot](resources/screenshot.png "screenshot")
